@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from './CartSlice'; // adjust the path if necessary
 
 function ProductList({ onHomeClick }) {
@@ -9,6 +9,8 @@ function ProductList({ onHomeClick }) {
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
     const [addedToCart, setAddedToCart] = useState([]);
     const dispatch = useDispatch();
+    const cartItems = useSelector((state) => state.cart.items); // adjust `cart` if your slice name differs
+
 
 
     const plantsArray = [

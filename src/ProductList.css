@@ -1,4 +1,8 @@
 /* Reset some default styles */
+* {
+    box-sizing: border-box;
+}
+
 body, h1, ul {
     margin: 0;
     padding: 0;
@@ -43,26 +47,33 @@ body {
 .product-grid {
     display:flex;
     flex-direction: column;
-    width: 100vw;
+width: 100%;
     align-items: center;
     justify-content: center;
 }
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
+
     /* background-color: pink; */
     /* justify-content: space-between; */
     padding: 20px;
     width: 100%;
     align-items: center;
     justify-content: center;
+    max-width: 1200px;
+margin: 0 auto;
+
 }
 
 /* Product Card */
 .product-card {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
-    max-width: calc(26.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
+    .product-card {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+}
+
     margin-bottom: 20px;
     padding: 20px;
     background-color: #fff;
